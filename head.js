@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 const head = function(array) {
   return array[0];
-}
+};
 
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
