@@ -6,6 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 assertEqual("The weather is nice", "The weather is nice");
