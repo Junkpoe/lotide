@@ -22,13 +22,13 @@ const letterPosition = function(sentence) {
     if (letter === ' ') {
       continue;
     } else if (!results[letter]) {
-        results[letter] = [x];
+      results[letter] = [x];
     } else {
-        results[letter].push(x);
+      results[letter].push(x);
     }
   }
 
   return results;
-}
+};
 
-console.log(letterPosition("where are the chickens"))
+console.log(letterPosition("where are the chickens"));
