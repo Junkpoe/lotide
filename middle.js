@@ -1,20 +1,8 @@
 // Test/Assertion Functions
 
-const eqArrays = function(arr1, arr2) {
-  for (let x = 0; x < arr1.length || x < arr2.length; ++x) {
-    if (arr1[x] !== arr2[x]) {
-      return false;
-    }
-  } return true;
-};
+const eqArrays = require('./eqArrays')
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual[0], actual[1]) !== expected) {
-    return false;
-  } else {
-    return true;
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual')
 
 //Main function for file
 const middleArray = function(arr) {
@@ -37,7 +25,4 @@ const middleArray = function(arr) {
   }
 };
 
-//Code to test function
-
-console.log(middleArray([1]));
-console.log(middleArray(["Why", "did", "the", "chicken", "cross", "the", "road?"]))
+module.exports = middleArray;
