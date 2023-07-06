@@ -8,4 +8,4 @@ const eqArrays = function(arr1, arr2) {
   } return true;
 };
 
-module.export = eqArrays;
+module.exports = eqArrays;
