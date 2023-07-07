@@ -1,19 +1,6 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log('✔✔✔Assertion Passed: [actual] === [expected]');
-  } else {
-    return console.log('🛑🛑🛑Assertion Failed: [Actual] !== [expected]');
-    
-  }
-};
+const assertEqual = require('./assertEqual')
 
-const eqArrays = function(arr1, arr2) {
-  for (let x = 0; x < arr1.length || x < arr2.length; ++x) {
-    if (arr1[x] !== arr2[x]) {
-      return false;
-    }
-  } return true;
-};
+const eqArrays = require('./eqArrays')
 
 //Returns true if both objects have identical key with identical values
 //Otherwise you get back false
@@ -35,12 +22,14 @@ const eqObjects = function(obj1, obj2) {
   return result;
 };
 
-const shirtObject = {color: "red", size: "medium"};
-const anotherShirtObject = { size: "medium", color: "red"};
+module.exports = eqObjects;
 
-eqObjects(shirtObject, anotherShirtObject); // should return true
-assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
+// const shirtObject = {color: "red", size: "medium"};
+// const anotherShirtObject = { size: "medium", color: "red"};
 
-const longSleeveShirtObject = {size: "medium", color: "red", sleeveLength: "long"};
-eqObjects(shirtObject, longSleeveShirtObject); // should show up as false
-assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
+// eqObjects(shirtObject, anotherShirtObject); // should return true
+// assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
+
+// const longSleeveShirtObject = {size: "medium", color: "red", sleeveLength: "long"};
+// eqObjects(shirtObject, longSleeveShirtObject); // should show up as false
+// assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
