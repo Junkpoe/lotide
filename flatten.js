@@ -1,18 +1,6 @@
-const eqArrays = function(arr1, arr2) {
-  for (let x = 0; x < arr1.length || x < arr2.length; ++x) {
-    if (arr1[x] !== arr2[x]) {
-      return false;
-    }
-  } return true;
-};
+const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual[0], actual[1]) !== expected) {
-    return false;
-  } else {
-    return true;
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const flatten = function(arr) {
   //input: an array that contains a nested array
@@ -34,4 +22,5 @@ const flatten = function(arr) {
 
 }
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
+module.exports = flatten;
+// console.log(flatten([1, 2, [3, 4], 5, [6]]));
