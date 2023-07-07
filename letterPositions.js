@@ -1,18 +1,6 @@
-const eqArrays = function(arr1, arr2) {
-  for (let x = 0; x < arr1.length || x < arr2.length; ++x) {
-    if (arr1[x] !== arr2[x]) {
-      return false;
-    }
-  } return true;
-};
+const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual[0], actual[1]) !== expected) {
-    return false;
-  } else {
-    return true;
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 //Set up a function to bring up the letter and return the position the it shows up without counting spaces
 const letterPosition = function(sentence) {
   const results = {};
@@ -31,4 +19,5 @@ const letterPosition = function(sentence) {
   return results;
 };
 
-console.log(letterPosition("where are the chickens"));
+module.exports = letterPosition;
+// console.log(letterPosition("where are the chickens"));
